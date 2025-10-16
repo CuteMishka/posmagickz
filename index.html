@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POSMAGIC.KZ | POSM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* === БАЗА === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url('background.png') repeat;
+      background-size: 30%;
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    /* === HEADER === */
+    header {
+      background: rgba(0, 51, 51, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 8%;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 110px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
+      margin: 0 40px;
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #f5f5f5;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a:hover {
+      color: #f97316;
+    }
+
+    /* === HERO === */
+    .hero {
+      padding: 70px 10% 40px;
+      max-width: 1000px;
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .hero strong {
+      display: block;
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    /* === PRODUCTS === */
+    .products {
+      display: flex;
+      gap: 20px;
+      padding: 20px 10% 60px;
+      justify-items: start;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #222;
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      background: #f97316;
+      color: #fff;
+      padding: 10px 0;
+      font-weight: 700;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: url('footer.svg') no-repeat bottom center;
+      background-size: cover;
+      color: #f0f0f0;
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: auto;
+      padding: 30px 0 52px;
+      transform: rotate(180deg);
+    }
+
+    .footer-content {
+      transform: rotate(180deg);
+      padding: 60px 10% 0;
+    }
+
+    .social-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      color: #f97316;
+      font-weight: 600;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+    /* === WHATSAPP FLOAT === */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* === GALLERY OVERLAY === */
+    .gallery-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .gallery-overlay.active {
+      display: flex;
+    }
+
+    .gallery-overlay img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .gallery-prev,
+    .gallery-next,
+    .gallery-close {
+      position: absolute;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .gallery-prev { left: 30px; }
+    .gallery-next { right: 30px; }
+    .gallery-close { top: 20px; right: 40px; font-size: 2.5rem; }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      header {
+        justify-content: center;
+        padding: 12px 5%;
+      }
+
+      .header-text, nav {
+        display: none;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+    h1{
+      font-size: 2.5rem;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="header-text">
+      Мы производим рекламные конструкции и POSM любого уровня сложности — от небольших стоек до масштабных выставочных решений.
+    </div>
+    <nav>
+      <a href="#products">Рубрики</a>
+      <a href="#about">О нас</a>
+      <a href="tel:+77478377878">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>POSM</h1>
+    <strong>POSM (Point of Sales Materials)</strong>
+    <p>
+      Рекламные конструкции и элементы мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках.
+    </p>
+  </section>
+
+  <section id="products" class="products">
+    <div class="product-card" data-gallery="pallets">
+      <img src="Rend01.png" alt="Паллеты" />
+      <h3>Паллеты</h3>
+    </div>
+    <div class="product-card" data-gallery="posm">
+      <img src="Rend02.png" alt="POSM" />
+      <h3>POSM</h3>
+    </div>
+    <div class="product-card" data-gallery="exhibitions">
+      <img src="Rend03.png" alt="Выставки" />
+      <h3>Выставки</h3>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 POSMAGIC.KZ — производство POSM и рекламных конструкций.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/posmagic.kz?igsh=anZlMGQxbXljOHFk" target="_blank">Instagram</a>
+        <a href="https://www.behance.net/aidarburabaev" target="_blank">Behance</a>
+        <a href="https://wa.me/77478377878" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/77478377878" target="_blank" class="whatsapp-float" aria-label="WhatsApp чат">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <div id="gallery" class="gallery-overlay">
+    <button id="closeBtn" class="gallery-close">×</button>
+    <button id="prevBtn" class="gallery-prev">‹</button>
+    <img id="galleryImage" src="" alt="gallery" />
+    <button id="nextBtn" class="gallery-next">›</button>
+  </div>
+
+  <script>
+    const galleries = {
+      pallets: ['shablon.png', 'shablon1.png', 'shablon.png'],
+      posm: ['shablon.png', 'shablon1.png', 'shablon.png'],
+      exhibitions: ['shablon.png', 'shablon1.png', 'shablon.png']
+    };
+
+    const overlay = document.getElementById('gallery');
+    const galleryImage = document.getElementById('galleryImage');
+    let currentGallery = [], currentIndex = 0;
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.onclick = () => {
+        currentGallery = galleries[card.dataset.gallery];
+        currentIndex = 0;
+        galleryImage.src = currentGallery[currentIndex];
+        overlay.classList.add('active');
+      };
+    });
+
+    document.getElementById('nextBtn').onclick = () => {
+      currentIndex = (currentIndex + 1) % currentGallery.length;
+      galleryImage.src = currentGallery[currentIndex];
+    };
+
+    document.getElementById('prevBtn').onclick = () => {
+      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+      galleryImage.src = currentGallery[currentIndex];
+    };
+
+    document.getElementById('closeBtn').onclick = () => overlay.classList.remove('active');
+  </script>
+</body>
+</html>
