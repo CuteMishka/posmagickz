@@ -4,7 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>POSMAGIC.KZ | POSM</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="POSMAGIC.KZ — производство POSM и рекламных конструкций в Казахстане. Паллеты, выставочные стенды, POS-материалы и мерчандайзинг для вашего бренда. Доставка по Казахстану." />
+
+  <meta name="keywords" content="POSM, POS материалы, рекламные конструкции, паллеты, выставочные стенды, производство POSM, POSMAGIC, Алматы, Казахстан" />
+  <link rel="canonical" href="https://posmagic.kz/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="POSMAGIC.KZ — производство POSM и рекламных конструкций" />
+  <meta property="og:description" content="POS-материалы, паллеты, выставочные стенды и POSM-решения для брендов в Казахстане." />
+  <meta property="og:url" content="https://posmagic.kz/" />
+  <meta property="og:image" content="https://posmagic.kz/main.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="POSMAGIC.KZ — производство POSM и рекламных конструкций" />
+  <meta name="twitter:description" content="POS-материалы, паллеты, выставочные стенды и POSM-решения для брендов в Казахстане." />
+  <meta name="twitter:image" content="https://posmagic.kz/main.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "POSMAGIC.KZ",
+    "description": "Производство POSM и рекламных конструкций в Казахстане: паллеты, выставочные стенды и POS-материалы.",
+    "image": "https://posmagic.kz/main.png",
+    "url": "https://posmagic.kz/",
+    "telephone": "+7-707-227-0770",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KZ",
+      "addressLocality": "Алматы"
+    },
+    "sameAs": [
+      "https://www.instagram.com/posmagic.kz",
+      "https://www.behance.net/aidarburabaev",
+      "https://wa.me/77478377878"
+    ]
+  }
+  </script>
+
+  <!-- 📈 Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- 🖋️ Шрифты -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- 🗂️ Preload для ускорения загрузки -->
+  <link rel="preload" as="image" href="main.png" />
+  <link rel="preload" as="font" href="https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff" type="font/woff" crossorigin />
+
+  <!-- 🧭 Robots (индексация) -->
+  <meta name="robots" content="index, follow" />
   <style>
     /* === БАЗА === */
     * {
@@ -17,7 +68,6 @@
       font-family: 'Century Gothic Bold';
       src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
            url('https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff') format('woff');
-      font-weight: bold;
     }
 
     body {
@@ -30,7 +80,11 @@
       display: flex;
       flex-direction: column;
     }
-
+    h1 {
+      letter-spacing: 0.05em !important;
+      font-weight: 300 !important;
+      font-size: 10em !important;
+    }
     a {
       color: inherit;
       text-decoration: none;
@@ -133,7 +187,7 @@
       transition: transform 0.3s;
       cursor: pointer;
       width: 200px;
-      height: 300px;
+      height: 330px;
     }
 
     .product-card:hover {
@@ -143,7 +197,7 @@
     .product-card img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .product-card h3 {
@@ -359,10 +413,21 @@
     height: 30px;
   }
 }
+.hero {
+    padding: 70px 20% 40px !important;
+  }
+  .products{
+    padding: 20px 20% 60px !important; 
+  }
+@media (max-width: 1335px) or (max-width: 1853px) {
+  .hero {
+    padding: 70px 4% 40px !important;
+  }
+  .products{
+    padding: 20px 4% 60px !important; 
+  }
+}
 
-
-
-    
   </style>
 </head>
 
@@ -384,9 +449,9 @@
     <div class="hero-text">
       <h1>POSM</h1>
       <strong>POSM (Point of Sales Materials)</strong>
-      <p>
-        Рекламные конструкции и элементы мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках.
-      </p>
+      <h2><p>
+        рекламные конструкции и элементы визуального мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках. Они формируют узнаваемость компании, усиливают эффект от присутствия продукции и стимулируют покупательскую активность.
+      </p></h2>
     </div>
     <img src="main.png" alt="Основной товар" class="main-image" />
   </section>
@@ -394,11 +459,11 @@
   <section id="products" class="products">
     <div class="product-card" data-gallery="pallets">
       <h3>Паллеты</h3>
-      <img src="Rend01.png" alt="Паллеты" />
+      <img src="Rend05.png" alt="Паллеты" />
     </div>
     <div class="product-card" data-gallery="posm">
       <h3>POSM</h3>
-      <img src="Rend02.png" alt="POSM" />
+      <img src="Rend04.png" alt="POSM" />
     </div>
     <div class="product-card" data-gallery="exhibitions">
       <h3>Выставки</h3>
@@ -408,7 +473,7 @@
 
   <footer>
     <div class="footer-content">
-      <p>© 2025 POSMAGIC.KZ — производство POSM и рекламных конструкций.</p>
+      <h3><p>© 2025 POSMAGIC.KZ — производство POSM и рекламных конструкций.</p></h3>
       <div class="social-links">
         <a href="https://www.instagram.com/posmagic.kz?igsh=anZlMGQxbXljOHFk" target="_blank">Instagram</a>
         <a href="https://www.behance.net/aidarburabaev" target="_blank">Behance</a>

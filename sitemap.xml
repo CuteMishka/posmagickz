@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://posmagic.kz/</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://posmagic.kz/main.png</image:loc>
+      <image:caption>Основной товар POSM</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://posmagic.kz/#products</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://posmagic.kz/#pallets</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://posmagic.kz/Rend05.png</image:loc>
+      <image:caption>Паллеты</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://posmagic.kz/#posm</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://posmagic.kz/Rend04.png</image:loc>
+      <image:caption>POSM</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://posmagic.kz/#exhibitions</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://posmagic.kz/Rend03.png</image:loc>
+      <image:caption>Выставочные стенды</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

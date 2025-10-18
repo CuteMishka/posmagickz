@@ -1,0 +1,12 @@
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+# Указываем путь к sitemap
+Sitemap: https://posmagic.kz/sitemap.xml
+
+# Настройка для Googlebot (опционально)
+User-agent: Googlebot
+Crawl-delay: 1
