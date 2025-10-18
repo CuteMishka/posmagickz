@@ -11,13 +11,20 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    }
+
+    @font-face {
+      font-family: 'Century Gothic Bold';
+      src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+           url('https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff') format('woff');
+      font-weight: bold;
     }
 
     body {
       background: url('background.png') repeat;
       background-size: 30%;
       color: #fff;
+      font-family: 'Century Gothic Bold', 'Inter', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
       display: flex;
@@ -60,18 +67,25 @@
       gap: 20px;
     }
 
-    nav a:hover {
-      color: #f97316;
-    }
-
     /* === HERO === */
     .hero {
-      padding: 70px 10% 40px;
-      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 70px 20% 40px;
       flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1 1 500px;
+      max-width: 1300px;
     }
 
     .hero h1 {
+      font-family: 'Impact', sans-serif;
       font-size: 7rem;
       font-weight: 900;
       line-height: 1.1;
@@ -92,12 +106,21 @@
       color: #f0f0f0;
     }
 
+    .main-image {
+      flex: 0 1 500px;
+      width: 100%;
+      max-width: 580px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
     /* === PRODUCTS === */
     .products {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
-      padding: 20px 10% 60px;
-      justify-items: start;
+      padding: 20px 20% 60px;
     }
 
     .product-card {
@@ -109,6 +132,8 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
       cursor: pointer;
+      width: 200px;
+      height: 300px;
     }
 
     .product-card:hover {
@@ -116,8 +141,8 @@
     }
 
     .product-card img {
-      width: 250px;
-      height: 200px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -187,7 +212,7 @@
       height: 36px;
     }
 
-    /* === GALLERY OVERLAY === */
+    /* === GALLERY === */
     .gallery-overlay {
       position: fixed;
       inset: 0;
@@ -219,38 +244,124 @@
       cursor: pointer;
       user-select: none;
     }
-
+    .call-button{
+      width: 210px;
+      height: 40px;
+      background-color: #f97316;
+      border-radius: 25px;
+    }
     .gallery-prev { left: 30px; }
     .gallery-next { right: 30px; }
     .gallery-close { top: 20px; right: 40px; font-size: 2.5rem; }
+    .call-button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 8px 30px;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
 
-    /* === RESPONSIVE === */
-    @media (max-width: 768px) {
-      header {
-        justify-content: center;
-        padding: 12px 5%;
-      }
+.call-button img {
+  width: 40px;
+  height: 40px;
+  background: #3a3a3a;
+  border-radius: 50%;
+  display: flex;
+  margin-left: -40px;
+}
 
-      .header-text, nav {
-        display: none;
-      }
+.call-button:hover {
+  background-color: rgba(0, 51, 51, 0.95);
+}
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 10px 5%;
+  }
 
-      .logo {
-        height: 50px;
-      }
+  .header-text {
+    display: none;
+  }
 
-      .hero h1 {
-        font-size: 3.2rem;
-        line-height: 1.2;
-      }
+  .logo {
+    height: 60px;
+  }
 
-      .hero p {
-        font-size: 1.1rem;
-      }
-    }
-    h1{
-      font-size: 2.5rem;
-    }
+  nav {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 5% 10px;
+    gap: 15px;
+    margin-top: 100px;
+  }
+
+  .hero-text {
+    height: auto;
+    flex: 0;
+    margin-bottom: 50px;
+  }
+
+  .main-image {
+    order: -1;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 10px;
+    flex: 0;
+    margin-bottom: 50px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+  }
+
+  .products {
+    padding: 10px 5% 30px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  /* === КНОПКА ТОЛЬКО С ИКОНКОЙ === */
+  .call-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    background-color:rgba(0, 51, 51, 0.95) ;
+  }
+
+  .call-button span {
+    display: none;
+  }
+
+  .call-button img {
+    margin-left: 0;
+    background: none;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
     
   </style>
 </head>
@@ -262,32 +373,36 @@
       Мы производим рекламные конструкции и POSM любого уровня сложности — от небольших стоек до масштабных выставочных решений.
     </div>
     <nav>
-      <a href="#products">Рубрики</a>
-      <a href="#about">О нас</a>
-      <a href="tel:+77478377878">Контакты</a>
+      <a href="tel:+77072270770" class="call-button">
+        <img src="phone-icon.png" alt="Телефон" />
+        <span>+7 707 227 07 70</span>
+      </a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>POSM</h1>
-    <strong>POSM (Point of Sales Materials)</strong>
-    <p>
-      Рекламные конструкции и элементы мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках.
-    </p>
+    <div class="hero-text">
+      <h1>POSM</h1>
+      <strong>POSM (Point of Sales Materials)</strong>
+      <p>
+        Рекламные конструкции и элементы мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках.
+      </p>
+    </div>
+    <img src="main.png" alt="Основной товар" class="main-image" />
   </section>
 
   <section id="products" class="products">
     <div class="product-card" data-gallery="pallets">
-      <img src="Rend01.png" alt="Паллеты" />
       <h3>Паллеты</h3>
+      <img src="Rend01.png" alt="Паллеты" />
     </div>
     <div class="product-card" data-gallery="posm">
-      <img src="Rend02.png" alt="POSM" />
       <h3>POSM</h3>
+      <img src="Rend02.png" alt="POSM" />
     </div>
     <div class="product-card" data-gallery="exhibitions">
-      <img src="Rend03.png" alt="Выставки" />
       <h3>Выставки</h3>
+      <img src="Rend03.png" alt="Выставки" />
     </div>
   </section>
 
