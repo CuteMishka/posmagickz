@@ -1,14 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>POSMAGIC.KZ | POSM</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <meta name="description" content="POSMAGIC.KZ — производство POSM и рекламных конструкций в Казахстане. Паллеты, выставочные стенды, POS-материалы и мерчандайзинг для вашего бренда. Доставка по Казахстану." />
-
   <meta name="keywords" content="POSM, POS материалы, рекламные конструкции, паллеты, выставочные стенды, производство POSM, POSMAGIC, Алматы, Казахстан" />
   <link rel="canonical" href="https://posmagic.kz/" />
 
@@ -22,7 +19,40 @@
   <meta name="twitter:title" content="POSMAGIC.KZ — производство POSM и рекламных конструкций" />
   <meta name="twitter:description" content="POS-материалы, паллеты, выставочные стенды и POSM-решения для брендов в Казахстане." />
   <meta name="twitter:image" content="https://posmagic.kz/main.png" />
+
   <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "POSMAGIC.KZ",
+    "description": "Производство POSM и рекламных конструкций в Казахстане: паллеты, выставочные стенды и POS-материалы.",
+    "image": "https://posmagic.kz/main.png",
+    "url": "https://posmagic.kz/",
+    "telephone": "+7-707-227-0770",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KZ",
+      "addressLocality": "Алматы"
+    },
+    "sameAs": [
+      "https://www.instagram.com/posmagic.kz",
+      "https://www.behance.net/aidarburabaev",
+      "https://wa.me/77478377878"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="main.png" />
+  <link rel="preload" as="font" href="https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff" type="font/woff" crossorigin />
+
+  <meta name="robots" content="index, follow" />
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -53,394 +83,474 @@
   <!-- 🗂️ Preload для ускорения загрузки -->
   <link rel="preload" as="image" href="main.png" />
   <link rel="preload" as="font" href="https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff" type="font/woff" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
   <!-- 🧭 Robots (индексация) -->
   <meta name="robots" content="index, follow" />
   <style>
-    /* === БАЗА === */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    @font-face {
-      font-family: 'Century Gothic Bold';
-      src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
-           url('https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff') format('woff');
-    }
-
-    body {
-      background: url('background.png') repeat;
-      background-size: 30%;
-      color: #fff;
-      font-family: 'Century Gothic Bold', 'Inter', sans-serif;
-      overflow-x: hidden;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    h1 {
-      letter-spacing: 0.05em !important;
-      font-weight: 300 !important;
-      font-size: 10em !important;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    /* === HEADER === */
-    header {
-      background: rgba(0, 51, 51, 0.95);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 8%;
-      z-index: 10;
-    }
-
-    .logo {
-      height: 110px;
-      width: auto;
-      flex-shrink: 0;
-    }
-
-    .header-text {
-      flex: 1;
-      margin: 0 40px;
-      max-width: 600px;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #f5f5f5;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    /* === HERO === */
-    .hero {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 40px;
-      padding: 70px 20% 40px;
-      flex: 1;
-      flex-wrap: wrap;
-    }
-
-    .hero-text {
-      flex: 1 1 500px;
-      max-width: 1300px;
-    }
-
-    .hero h1 {
-      font-family: 'Impact', sans-serif;
-      font-size: 7rem;
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -1px;
-    }
-
-    .hero strong {
-      display: block;
-      margin-top: 15px;
-      font-weight: 700;
-      font-size: 1.4rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      line-height: 1.6;
-      color: #f0f0f0;
-    }
-
-    .main-image {
-      flex: 0 1 500px;
-      width: 100%;
-      max-width: 580px;
-      height: auto;
-      border-radius: 10px;
-      object-fit: contain;
-    }
-
-    /* === PRODUCTS === */
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px 20% 60px;
-    }
-
-    .product-card {
-      background: rgba(255, 255, 255, 0.9);
-      color: #222;
-      border-radius: 16px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-      cursor: pointer;
-      width: 200px;
-      height: 330px;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .product-card h3 {
-      background: #f97316;
-      color: #fff;
-      padding: 10px 0;
-      font-weight: 700;
-    }
-
-    /* === FOOTER === */
-    footer {
-      background: url('footer.svg') no-repeat bottom center;
-      background-size: cover;
-      color: #f0f0f0;
-      text-align: center;
-      font-size: 0.95rem;
-      margin-top: auto;
-      padding: 30px 0 52px;
-      transform: rotate(180deg);
-    }
-
-    .footer-content {
-      transform: rotate(180deg);
-      padding: 60px 10% 0;
-    }
-
-    .social-links {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .social-links a {
-      color: #f97316;
-      font-weight: 600;
-    }
-
-    .social-links a:hover {
-      color: #fff;
-    }
-
-    /* === WHATSAPP FLOAT === */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      width: 60px;
-      height: 60px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      z-index: 100;
-      transition: transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp-float img {
-      width: 36px;
-      height: 36px;
-    }
-
-    /* === GALLERY === */
-    .gallery-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .gallery-overlay.active {
-      display: flex;
-    }
-
-    .gallery-overlay img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-
-    .gallery-prev,
-    .gallery-next,
-    .gallery-close {
-      position: absolute;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 3rem;
-      cursor: pointer;
-      user-select: none;
-    }
-    .call-button{
-      width: 210px;
-      height: 40px;
-      background-color: #f97316;
-      border-radius: 25px;
-    }
-    .gallery-prev { left: 30px; }
-    .gallery-next { right: 30px; }
-    .gallery-close { top: 20px; right: 40px; font-size: 2.5rem; }
-    .call-button {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 50px;
-  padding: 8px 30px;
-  gap: 8px;
-  transition: background 0.2s ease;
-}
-
-.call-button img {
-  width: 40px;
-  height: 40px;
-  background: #3a3a3a;
-  border-radius: 50%;
-  display: flex;
-  margin-left: -40px;
-}
-
-.call-button:hover {
-  background-color: rgba(0, 51, 51, 0.95);
-}
-@media (max-width: 768px) {
-  header {
-    justify-content: space-between;
-    padding: 10px 5%;
+  /* === БАЗА === */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  .header-text {
-    display: none;
+  @font-face {
+    font-family: 'Century Gothic Bold';
+    src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+         url('https://fonts.cdnfonts.com/s/16009/CenturyGothicBold.woff') format('woff');
+  }
+
+  body {
+    background: url('background.png') repeat;
+    background-size: 30%;
+    color: #fff;
+    font-family: 'Century Gothic Bold', 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    letter-spacing: 0.05em !important;
+    font-weight: 300 !important;
+    font-size: 10em !important;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  /* === HEADER === */
+  header {
+    width: 100%;
+    background: rgba(0, 51, 51, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 10;
   }
 
   .logo {
-    height: 60px;
+    height: 110px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .header-text {
+    flex: 1;
+    margin: 0 20px;
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f5f5f5;
   }
 
   nav {
     display: flex;
+    gap: 20px;
   }
 
+  /* === HERO === */
   .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 5% 10px;
-    gap: 15px;
-    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 80px 40px;
+    flex: 1;
+    flex-wrap: wrap;
   }
 
   .hero-text {
-    height: auto;
-    flex: 0;
-    margin-bottom: 50px;
-  }
-
-  .main-image {
-    order: -1;
-    max-width: 90%;
-    height: auto;
-    margin: 0 auto 10px;
-    flex: 0;
-    margin-bottom: 50px;
+    flex: 1 1 500px;
+    max-width: 1300px;
   }
 
   .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 5px;
+    font-family: 'Anton', sans-serif;
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .hero strong {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1.4rem;
   }
 
   .hero p {
-    font-size: 1.1rem;
-    margin-top: 5px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #f0f0f0;
   }
 
+  .main-image {
+    flex: 0 1 500px;
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+  /* === PRODUCTS === */
   .products {
-    padding: 10px 5% 30px;
-    gap: 10px;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 80px 60px;
   }
 
   .product-card {
-    width: 90%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #222;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    width: 200px;
+    height: 330px;
   }
 
-  /* === КНОПКА ТОЛЬКО С ИКОНКОЙ === */
-  .call-button {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-card h3 {
+    background: #f97316;
+    color: #fff;
+    padding: 10px 0;
+    font-weight: 700;
+  }
+
+  /* === FOOTER === */
+  footer {
+    width: 100%;
+    background: url('footer.svg') no-repeat bottom center;
+    background-size: cover;
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: auto;
+    padding: 30px 20px 52px;
+    transform: rotate(180deg);
+  }
+
+  .footer-content {
+    padding: 20px;
+    transform: rotate(180deg);
+  }
+
+  .social-links {
+    margin-top: 10px;
     display: flex;
-    background-color:rgba(0, 51, 51, 0.95) ;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .call-button span {
+  .social-links a {
+    color: #f97316;
+    font-weight: 600;
+  }
+
+  .social-links a:hover {
+    color: #fff;
+  }
+
+  /* === WHATSAPP FLOAT === */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: transform 0.2s;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* === GALLERY === */
+  .gallery-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
     display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .gallery-overlay.active {
+    display: flex;
+  }
+
+  .gallery-overlay img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+
+  .gallery-prev,
+  .gallery-next,
+  .gallery-close {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .gallery-prev { left: 30px; }
+  .gallery-next { right: 30px; }
+  .gallery-close { top: 20px; right: 40px; font-size: 2.5rem; }
+
+  /* === CALL BUTTON === */
+  .call-button {
+    display: flex;
+    width: 200px;
+    height: 42px;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 8px 30px;
+    gap: 8px;
+    transition: background 0.2s ease;
   }
 
   .call-button img {
-    margin-left: 0;
-    background: none;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    display: flex;
+    margin-left: -40px;
   }
-}
-.hero {
-    padding: 70px 20% 40px !important;
-  }
-  .products{
-    padding: 20px 20% 60px !important; 
-  }
-@media (max-width: 1335px) or (max-width: 1853px) {
-  .hero {
-    padding: 70px 4% 40px !important;
-  }
-  .products{
-    padding: 20px 4% 60px !important; 
-  }
-}
 
+  .call-button:hover {
+    background-color: #f97316;
+  }
+  /* === МОБИЛЬНЫЕ УСТРОЙСТВА === */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 15px;
+    }
+
+    .header-text {
+      display: none;
+      font-size: 0.85rem;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 15px 10px;
+      gap: 15px;
+      margin-top: 80px;
+    }
+
+    .hero-text {
+      height: auto;
+      flex: 0;
+      margin-bottom: 40px;
+      flex: 0 1 auto;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+  text-align: center;
+    }
+
+    .main-image {
+      order: -1;
+      max-width: 90%;
+      height: auto;
+      margin: 0 auto 30px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero strong {
+      font-size: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .products {
+      padding: 10px 15px 30px;
+      gap: 10px;
+    }
+
+    .product-card {
+      width: 90%;
+    }
+
+    .product-card h3 {
+      font-size: 1rem;
+    }
+
+    /* Только иконка для кнопки */
+    .call-button {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .call-button span {
+      display: none;
+    }
+
+    .call-button img {
+      margin-left: 0;
+      width: 30px;
+      height: 30px;
+      background: none;
+    }
+    body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 10px 0; /* убираем отступы справа и слева */
+  }
+
+  footer {
+    padding: 20px 0 52px; /* убираем отступы справа и слева */
+    background-position: center bottom;
+    transform: rotate(180deg);
+  }
+
+  .hero {
+    margin-top: 0; /* если есть лишний верхний отступ */
+    padding: 20px 10px 10px; /* уменьшаем паддинги */
+  }
+
+  .products {
+    padding: 10px 10px 30px;
+  }
+  .hero-text {
+    padding: 0 10px;
+    text-align: center; /* часто на мобилках текст центрируют */
+  }
+  h1 {
+    font-size: 6em !important;
+  }
+  }
+
+  /* === ПЛАНШЕТ === */
+  @media (max-width: 1335px) {
+    .hero {
+      padding: 50px 30px 40px;
+      flex-direction: column;
+    }
+    .products {
+      padding: 20px 30px 50px;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+    }
+
+    .hero strong {
+      font-size: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    .product-card h3 {
+      font-size: 1.1rem;
+    }
+    body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 10px 0; /* убираем отступы справа и слева */
+  }
+
+  footer {
+    padding: 20px 0 52px; /* убираем отступы справа и слева */
+    background-position: center bottom;
+  }
+
+  .hero {
+    margin-top: 0; /* если есть лишний верхний отступ */
+    padding: 20px 10px 10px; /* уменьшаем паддинги */
+  }
+
+  .products {
+    padding: 10px 10px 30px;
+  }
+  .hero-text {
+    padding: 0 10px;
+    text-align: center; /* часто на мобилках текст центрируют */
+  }
+  h1 {
+    font-size: 6em !important;
+  }
+  }
+</style>
   </style>
 </head>
-
 <body>
   <header>
-    <img src="logo.png" alt="Logo" class="logo" />
+    <img src="logo.png" alt="Логотип POSMAGIC.KZ" class="logo" />
     <div class="header-text">
       Мы производим рекламные конструкции и POSM любого уровня сложности — от небольших стоек до масштабных выставочных решений.
     </div>
     <nav>
-      <a href="tel:+77072270770" class="call-button">
-        <img src="phone-icon.png" alt="Телефон" />
-        <span>+7 707 227 07 70</span>
+      <a href="tel:+77478377878" class="call-button">
+        <img src="phone-icon.png" alt="Телефон POSMAGIC.KZ" />
+        <span>+7 747 837 78 78</span>
       </a>
     </nav>
   </header>
@@ -449,40 +559,38 @@
     <div class="hero-text">
       <h1>POSM</h1>
       <strong>POSM (Point of Sales Materials)</strong>
-      <h2><p>
-        рекламные конструкции и элементы визуального мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках. Они формируют узнаваемость компании, усиливают эффект от присутствия продукции и стимулируют покупательскую активность.
-      </p></h2>
+      <p>рекламные конструкции и элементы визуального мерчандайзинга, которые помогают брендам выделяться на местах продаж и выставках. Они формируют узнаваемость компании, усиливают эффект от присутствия продукции и стимулируют покупательскую активность.</p>
     </div>
-    <img src="main.png" alt="Основной товар" class="main-image" />
+    <img src="main.png" alt="Основной товар POSM" class="main-image" />
   </section>
 
   <section id="products" class="products">
-    <div class="product-card" data-gallery="pallets">
-      <h3>Паллеты</h3>
-      <img src="Rend05.png" alt="Паллеты" />
+    <div class="product-card" data-gallery="pallets" itemscope itemtype="https://schema.org/Product">
+      <h3 itemprop="name">Паллеты</h3>
+      <img src="Rend05.png" alt="POSM паллеты для магазинов и выставок" itemprop="image" />
     </div>
-    <div class="product-card" data-gallery="posm">
-      <h3>POSM</h3>
-      <img src="Rend04.png" alt="POSM" />
+    <div class="product-card" data-gallery="posm" itemscope itemtype="https://schema.org/Product">
+      <h3 itemprop="name">POSM</h3>
+      <img src="Rend04.png" alt="POSM рекламные материалы" itemprop="image" />
     </div>
-    <div class="product-card" data-gallery="exhibitions">
-      <h3>Выставки</h3>
-      <img src="Rend03.png" alt="Выставки" />
+    <div class="product-card" data-gallery="exhibitions" itemscope itemtype="https://schema.org/Product">
+      <h3 itemprop="name">Выставки</h3>
+      <img src="Rend03.png" alt="Выставочные стенды и экспозиции" itemprop="image" />
     </div>
   </section>
 
   <footer>
     <div class="footer-content">
-      <h3><p>© 2025 POSMAGIC.KZ — производство POSM и рекламных конструкций.</p></h3>
+      <p>© 2025 POSMAGIC.KZ — производство POSM и рекламных конструкций.</p>
       <div class="social-links">
-        <a href="https://www.instagram.com/posmagic.kz?igsh=anZlMGQxbXljOHFk" target="_blank">Instagram</a>
-        <a href="https://www.behance.net/aidarburabaev" target="_blank">Behance</a>
-        <a href="https://wa.me/77478377878" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/posmagic.kz" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.behance.net/aidarburabaev" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://wa.me/77478377878" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/77478377878" target="_blank" class="whatsapp-float" aria-label="WhatsApp чат">
+  <a href="https://wa.me/+77478377878" target="_blank" class="whatsapp-float" aria-label="WhatsApp чат">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 
