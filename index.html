@@ -370,7 +370,9 @@
     header {
       padding: 10px 15px;
     }
-
+    .instagram-user{
+      display: none;
+    }
     .header-text {
       display: none;
       font-size: 0.85rem;
@@ -403,6 +405,7 @@
       max-width: 90%;
       height: auto;
       margin: 0 auto 30px;
+      flex: 0;
     }
 
     .hero h1 {
@@ -420,6 +423,7 @@
     .products {
       padding: 10px 15px 30px;
       gap: 10px;
+      justify-content: center;
     }
 
     .product-card {
@@ -484,12 +488,19 @@
 
   /* === ПЛАНШЕТ === */
   @media (max-width: 1335px) {
+    .main-image{
+      flex: 0;
+    }
+    .instagram-user{
+      display: none;
+    }
     .hero {
       padding: 50px 30px 40px;
       flex-direction: column;
     }
     .products {
       padding: 20px 30px 50px;
+      justify-content: center;
     }
 
     .hero h1 {
@@ -538,22 +549,80 @@
     font-size: 6em !important;
   }
   }
+  nav {
+  display: flex;
+  gap: 15px; /* расстояние между кнопками */
+  align-items: center;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(0, 51, 51, 0.95);
+}
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.instagram-link img {
+  width: 30px;
+  height: 30px;
+}
+
+.instagram-link:hover {
+  color: #E1306C; /* цвет при наведении */
+}
+
+.header-text {
+  flex: 1;
+  margin: 0 20px;
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
 </style>
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Логотип POSMAGIC.KZ" class="logo" />
-    <div class="header-text">
-      Мы производим рекламные конструкции и POSM любого уровня сложности — от небольших стоек до масштабных выставочных решений.
-    </div>
-    <nav>
-      <a href="tel:+77478377878" class="call-button">
-        <img src="phone-icon.png" alt="Телефон POSMAGIC.KZ" />
-        <span>+7 747 837 78 78</span>
-      </a>
-    </nav>
+  <img src="logo.png" alt="Логотип POSMAGIC.KZ" class="logo" />
+  
+
+
+  <div class="header-text">
+    Мы производим рекламные конструкции и POSM любого уровня сложности — от небольших стоек до масштабных выставочных решений.
+  </div>
+
+  <nav>
+    <a href="https://www.instagram.com/posmagic.kz" target="_blank" class="instagram-link">
+    <img src="instagram-icon.png" alt="Instagram POSMAGIC.KZ" />
+    <span class="instagram-user">@posmagickz</span>
+  </a>
+    <a href="tel:+77478377878" class="call-button">
+      <img src="phone-icon.png" alt="Телефон POSMAGIC.KZ" />
+      <span>+7 747 837 78 78</span>
+    </a>
+  </nav>
   </header>
+
+
 
   <section class="hero">
     <div class="hero-text">
