@@ -362,6 +362,24 @@
     display: flex;
     margin-left: -40px;
   }
+  .mail-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.mail-link img {
+  width: 30px;
+  height: 30px;
+}
+
+.mail-link:hover {
+  color: #f97316;
+}
 
   .call-button:hover {
     background-color: #f97316;
@@ -370,6 +388,9 @@
   @media (max-width: 768px) {
     header {
       padding: 10px 15px;
+    }
+    .mail-user{
+      display: none;
     }
     .instagram-user{
       display: none;
@@ -612,15 +633,23 @@ nav {
   </div>
 
   <nav>
-    <a href="https://www.instagram.com/posmagic.kz" target="_blank" class="instagram-link">
+  <a href="https://e.mail.ru/compose?to=reklama.pro@mail.ru" target="_blank" class="mail-link">
+  <img src="mail-icon.png" alt="Почта POSMAGIC.KZ" />
+  <span class="mail-user">reklama.pro@mail.ru</span>
+</a>
+
+
+  <a href="https://www.instagram.com/posmagic.kz" target="_blank" class="instagram-link">
     <img src="instagram-icon.png" alt="Instagram POSMAGIC.KZ" />
     <span class="instagram-user">@posmagickz</span>
   </a>
-    <a href="tel:+77478377878" class="call-button">
-      <img src="phone-icon.png" alt="Телефон POSMAGIC.KZ" />
-      <span>+7 747 837 78 78</span>
-    </a>
-  </nav>
+
+  <a href="tel:+77478377878" class="call-button">
+    <img src="phone-icon.png" alt="Телефон POSMAGIC.KZ" />
+    <span>+7 747 837 78 78</span>
+  </a>
+</nav>
+
   </header>
 
 
@@ -637,15 +666,15 @@ nav {
   <section id="products" class="products">
     <div class="product-card" data-gallery="pallets" itemscope itemtype="https://schema.org/Product">
       <h3 itemprop="name">Паллеты</h3>
-      <img src="Rend05.png" alt="POSM паллеты для магазинов и выставок" itemprop="image" />
+      <img src="Rend01.png" alt="POSM паллеты для магазинов и выставок" itemprop="image" />
     </div>
     <div class="product-card" data-gallery="posm" itemscope itemtype="https://schema.org/Product">
       <h3 itemprop="name">POSM</h3>
-      <img src="Rend04.png" alt="POSM рекламные материалы" itemprop="image" />
+      <img src="photos1/pic9.webp" alt="POSM рекламные материалы" itemprop="image" />
     </div>
     <div class="product-card" data-gallery="exhibitions" itemscope itemtype="https://schema.org/Product">
       <h3 itemprop="name">Выставки</h3>
-      <img src="Rend03.png" alt="Выставочные стенды и экспозиции" itemprop="image" />
+      <img src="main.png" alt="Выставочные стенды и экспозиции" itemprop="image" />
     </div>
   </section>
 
@@ -673,9 +702,9 @@ nav {
 
   <script>
     const galleries = {
-      pallets: ['shablon.png', 'shablon1.png', 'shablon.png'],
-      posm: ['shablon.png', 'shablon1.png', 'shablon.png'],
-      exhibitions: ['shablon.png', 'shablon1.png', 'shablon.png']
+      pallets: ['photso/pic1.webp', 'photso/pic2.webp', 'photso/pic3.webp', 'photso/pic4.webp', 'photso/pic5.webp', 'photso/pic6.webp', 'photso/pic7.webp', 'photso/pic8.webp', 'photso/pic9.webp', 'photso/pic10.webp'],
+      posm: ['photos1/pic1.webp', 'photos1/pic2.webp', 'photos1/pic3.webp', 'photos1/pic4.webp', 'photos1/pic5.webp', 'photos1/pic6.webp', 'photos1/pic7.webp', 'photos1/pic8.webp'],
+      exhibitions: ['photos/pic1.webp', 'photos/pic2.webp', 'photos/pic3.webp', 'photos/pic4.webp', 'photos/pic5.webp', 'photos/pic6.webp', 'photos/pic7.webp', 'photos/pic8.webp', 'photos/pic9.webp', 'photos/pic10.webp']
     };
 
     const overlay = document.getElementById('gallery');
@@ -702,6 +731,12 @@ nav {
     };
 
     document.getElementById('closeBtn').onclick = () => overlay.classList.remove('active');
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+          overlay.classList.remove('active');
+    }
+  });
+
   </script>
 </body>
 </html>
